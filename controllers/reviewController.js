@@ -15,8 +15,8 @@ export const getAllReviews = async(req, res) =>{
 
 //  create review
 export const createReview = async(req, res) =>{
-    if(!req.body.doctor) req.bodyody.doctor = req.params.doctorId
-    if(!req.body.user) req.body.doctor = req.userId
+    if(!req.body.doctor) req.body.doctor = req.params.doctorId
+    if(!req.body.user) req.body.user = req.userId
 
     const newReview = new Review(req.body)
     try{
